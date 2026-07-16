@@ -1,0 +1,14 @@
+# Arquivos de ambiente
+.env
+.streamlit/secrets.toml
+.venv
+venv/
+
+# Arquivos compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos de sistema
+.DS_Store

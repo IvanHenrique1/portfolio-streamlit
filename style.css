@@ -1,0 +1,38 @@
+/* Teste para ver se o CSS está sendo carregado */
+body {
+    background-color: #fff0f0 !important;
+}
+
+/* Animação de fade-in para os cards */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Seletor para os cards de projeto (st.container(border=True)) */
+[data-testid="stVerticalBlock"] > [data-testid="stVerticalBlockBorderWrapper"] {
+    animation: fadeIn 0.8s ease-out forwards; /* Aplica a animação de surgimento */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Prepara para o hover */
+}
+
+/* Efeito de hover nos cards */
+[data-testid="stVerticalBlock"] > [data-testid="stVerticalBlockBorderWrapper"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Efeito de hover para os botões */
+[data-testid="stLinkButton"] > a {
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Prepara para o hover */
+}
+
+[data-testid="stLinkButton"] > a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
